@@ -3,28 +3,12 @@
 from django.urls import path
 from .views import index, products, product, about, contacts
 
-
-
-urlpatterns = [
-    path('', index),
-
-]
-urlpatterns = [
-    path('', index),
-    path('products/', products),
-]
+app_name = 'main'
 
 urlpatterns = [
-    path('', index),
-    path('product/', product),
-]
-
-urlpatterns = [
-    path('', index),
-    path('about/', about),
-]
-
-urlpatterns = [
-    path('', index),
-    path('contacts/', contacts),
+    path('', index, name='index'),
+    path('products/', products, name='products'),
+    path('product/', product, name='product'),
+    path('about/', about, name='about'),
+    path('contacts/', contacts, name='contacts'),
 ]
